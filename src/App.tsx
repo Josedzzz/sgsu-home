@@ -1,44 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Zone } from "./types/Zone";
+import { universityData } from "./data/universityData";
+import Header from "./components/Header";
 import Main from "./components/Main";
 import { SideBar } from "./components/SideBar";
-import { universityData } from "./data/universityData";
 
 function App() {
+  const [zoneId, setZoneId] = useState<string>("guayacan");
   const [data, setData] = useState<Zone | null>(null);
-  const [showModal, setShowModal] = useState(false);
 
   /**
-   * handle the showModal value
+   * set the zoneId
+   * @param zoneId the id of the zone
    */
-  const handleToggleModal = () => {
-    setShowModal(!showModal);
+  const handleZoneSelection = (zoneId: string) => {
+    setZoneId(zoneId);
   };
 
   /**
-   * Update data based on the selected zone ID
+   * set the zone data whenever zoneId changes
    */
-  const handleZoneSelection = (zoneId: string) => {
+  useEffect(() => {
     const selectedZone =
       universityData.find((zone) => zone.id === zoneId) || null;
     setData(selectedZone);
-  };
+  }, [zoneId]);
 
   return (
     <>
-      <Main handleZoneSelection={handleZoneSelection} />
-
-      {/* Button to open the sidebar */}
-      <button
-        onClick={handleToggleModal}
-        className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-      >
-        Open Sidebar
-      </button>
-
-      {showModal && (
-        <SideBar data={data} handleToggleModal={handleToggleModal} />
-      )}
+      <Header handleZoneSelection={handleZoneSelection} zoneId={zoneId} />
+      <div className="flex flex-col items-center justify-center md:flex-row mt-20 gap-4">
+        <div className="flex-1">
+          <Main />
+        </div>
+        <div className="flex-1">
+          <SideBar data={data} />
+        </div>
+      </div>
     </>
   );
 }
