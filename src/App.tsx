@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <Header handleZoneSelection={handleZoneSelection} zoneId={zoneId} />
-      <div className="flex flex-col items-center justify-center md:flex-row mt-20 gap-4">
+      <div className="flex flex-col items-center justify-center md:flex-row mt-20 gap-4 min-h-[calc(100vh-6rem)]">
         <div className="flex-1">
           <Main />
         </div>
