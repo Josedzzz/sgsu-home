@@ -301,4 +301,19 @@ export const universityData: Zone[] = [
       },
     ],
   },
+  {
+    id: "guayacan",
+    name: "Guayacan",
+    buildings: [
+      {
+        id: "a1",
+        name: "Bloque Administrativo",
+        type: "Edificio",
+        description:
+          "El Bloque Administrativo es el centro neurálgico de las operaciones administrativas de la Universidad del Quindío. Aquí se encuentran las oficinas de rectoría, secretaría, finanzas y otras dependencias clave para el funcionamiento de la institución.",
+        coordinates: { x: 95, y: 115, z: 0 },
+        pointsOfInterest: [],
+      },
+    ],
+  },
 ];
