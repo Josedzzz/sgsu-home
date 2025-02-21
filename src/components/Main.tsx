@@ -1,52 +1,76 @@
-import { useEffect } from "react";
-import * as THREE from "three";
-
 export default function Main() {
-  useEffect(() => {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000,
-    );
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-
-    // Establecer el tamaño del renderizador
-    renderer.setSize(400, 400);
-    document
-      .getElementById("threejs-container")
-      ?.appendChild(renderer.domElement);
-
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    camera.position.z = 5;
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    return () => {
-      renderer.dispose();
-      const container = document.getElementById("threejs-container");
-      if (container) {
-        container.removeChild(renderer.domElement);
-      }
-    };
-  }, []);
+  const handleZoneClick = (zoneName: string) => {
+    alert(`Hiciste clic en: ${zoneName}`);
+  };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">Cubo Verde Giratorio</h2>
-      <div id="threejs-container" style={{ width: "400px", height: "400px" }} />
+    <div style={{ width: "100%", maxWidth: "800px", margin: "0 auto" }}>
+      <svg
+        viewBox="0 0 100 100"
+        preserveAspectRatio="xMidYMid meet"
+        style={{ width: "100%", height: "auto" }}
+      >
+        {/* Cancha (Polígono irregular) */}
+        <polygon
+          points="10,50 30,30 70,30 90,50 70,70 30,70"
+          fill="brown"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "saddlebrown")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "brown")}
+          onClick={() => handleZoneClick("Cancha")}
+        />
+        <text x="50" y="50" fill="white" fontSize="5" textAnchor="middle">
+          Cancha
+        </text>
+
+        {/* Edificio A (Rectángulo) */}
+        <rect
+          x="0"
+          y="0"
+          width="15"
+          height="20"
+          fill="blue"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "darkblue")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "blue")}
+          onClick={() => handleZoneClick("Edificio A")}
+        />
+        <text x="17.5" y="20" fill="white" fontSize="4" textAnchor="middle">
+          E1
+        </text>
+
+        {/* Edificio B (Rectángulo) */}
+        <rect
+          x="40"
+          y="10"
+          width="15"
+          height="20"
+          fill="red"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "darkred")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "red")}
+          onClick={() => handleZoneClick("Edificio B")}
+        />
+        <text x="47.5" y="20" fill="white" fontSize="4" textAnchor="middle">
+          E2
+        </text>
+
+        {/* Zona Verde (Círculo) */}
+        <circle
+          cx="75"
+          cy="50"
+          r="10"
+          fill="green"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "darkgreen")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "green")}
+          onClick={() => handleZoneClick("Zona Verde")}
+        />
+        <text x="75" y="50" fill="white" fontSize="4" textAnchor="middle">
+          ZV
+        </text>
+
+        {/* Texto descriptivo del mapa */}
+        <text x="50" y="95" fontSize="5" fill="black" textAnchor="middle">
+          Mapa de la Universidad
+        </text>
+      </svg>
     </div>
   );
 }
