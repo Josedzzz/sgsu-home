@@ -4,7 +4,14 @@ export default function Main() {
   };
 
   return (
-    <div style={{ width: "100%", maxWidth: "600px", margin: "0 auto" }}>
+    <div
+      style={{
+        width: "100%",
+        maxWidth: "600px",
+        margin: "0 auto",
+        border: "1px solid #ccc",
+      }}
+    >
       <svg
         viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid meet"
@@ -96,6 +103,138 @@ export default function Main() {
         />
 
         {/* Platanillas zone */}
+
+        {/* polygon e1 */}
+        <polygon
+          points="75, 9 76, 12 80, 11 79, 8"
+          fill="#ef5350"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
+          onClick={() => handleZoneClick("e1")}
+        />
+
+        {/* polygon e2 */}
+        <polygon
+          points="70, 11 71, 14 75, 13 74, 10"
+          fill="#ef5350"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
+          onClick={() => handleZoneClick("e2")}
+        />
+
+        {/* polygon e3 */}
+        <polygon
+          points="58, 5 62, 11 74, 9 72, 3"
+          fill="#ef5350"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
+          onClick={() => handleZoneClick("e3")}
+        />
+
+        {/* polygon e4 */}
+        <polygon
+          points="62, 12 63, 15 70, 14 69, 11"
+          fill="#ef5350"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
+          onClick={() => handleZoneClick("e4")}
+        />
+
+        {/* Cambulos zone */}
+
+        {/* polygon c10 */}
+        <polygon
+          points="98, 9 94, 18 89, 17 94, 7"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c10")}
+        />
+
+        {/* circle c9 */}
+        <circle
+          cx="80"
+          cy="18"
+          r="3"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c9")}
+        />
+
+        {/* polygon c7 */}
+        <polygon
+          points="55, 28 70, 49 85, 44 70, 23"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c7")}
+        />
+
+        {/* polygon c6 */}
+        <polygon
+          points="84, 35 88, 40 92, 38 89, 34"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c6")}
+        />
+
+        {/* polygon c5 */}
+        <polygon
+          points="80, 47 87, 58 93, 56 86, 45"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c5")}
+        />
+
+        {/* polygon c4 */}
+        <polygon
+          points="72, 50 79, 61 85, 59 78, 48"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c4")}
+        />
+
+        {/* polygon c2 */}
+        <polygon
+          points="80, 62 83, 66 96, 62 93, 58"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c2")}
+        />
+
+        {/* polygon c1 */}
+        <polygon
+          points="80, 67 80, 72 90, 72 90, 67"
+          fill="#ffa726"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
+          onClick={() => handleZoneClick("c2")}
+        />
+
+        {/* Guayacan zone */}
+
+        {/* polygon a1 */}
+        <polygon
+          points="65, 80 71, 85 80, 80 80, 75 70, 80"
+          fill="#ffeb3b"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#fbc02d")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffeb3b")}
+          onClick={() => handleZoneClick("a1")}
+        />
+
+        {/* polygon a2 */}
+        <polygon
+          points="82, 75 82, 85 90, 85 90, 75"
+          fill="#ffeb3b"
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#fbc02d")}
+          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffeb3b")}
+          onClick={() => handleZoneClick("a1")}
+        />
       </svg>
     </div>
   );
