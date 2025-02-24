@@ -11,6 +11,7 @@ export default function Main() {
         margin: "0 auto",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
         backgroundColor: "#fff",
+        borderRadius: "18px",
       }}
     >
       <svg
@@ -349,6 +350,143 @@ export default function Main() {
           onMouseLeave={(e) => (e.currentTarget.style.fill = "#4caf50")}
           onClick={() => handleZoneClick("b6")}
         />
+
+        {/* Streets */}
+        <polyline
+          points="5, 30 22, 14 44, 12 58, 3 78, 1 98, 4"
+          fill="none"
+          stroke="#aaa"
+          strokeWidth="0.5"
+        />
+
+        <polyline
+          points="14, 90 23, 82 38, 81 80, 88 95, 94"
+          fill="none"
+          stroke="#aaa"
+          strokeWidth="0.5"
+        />
+
+        <polyline
+          points="62, 85 65, 76 67, 74 93, 73"
+          fill="none"
+          stroke="#aaa"
+          strokeWidth="0.5"
+        />
+
+        {/* Small streets */}
+        <polyline
+          points="44, 12 44, 16 70, 55 75, 58 79, 65 79, 73"
+          fill="none"
+          stroke="#ccc"
+          strokeWidth="0.4"
+        />
+
+        <polyline
+          points="80, 88 81, 82 81, 74"
+          fill="none"
+          stroke="#ccc"
+          strokeWidth="0.4"
+        />
+
+        <polyline
+          points="54, 84 53, 88 44, 87 40, 89"
+          fill="none"
+          stroke="#ccc"
+          strokeWidth="0.4"
+        />
+
+        <polyline
+          points="8, 27 8, 45 9, 45"
+          fill="none"
+          stroke="#ccc"
+          strokeWidth="0.4"
+        />
+
+        <polyline
+          points="16, 20 23, 29"
+          fill="none"
+          stroke="#ccc"
+          strokeWidth="0.4"
+        />
+
+        <polyline
+          points="30, 14 30, 22"
+          fill="none"
+          stroke="#ccc"
+          strokeWidth="0.4"
+        />
+
+        <polyline
+          points="35, 13 35, 16"
+          fill="none"
+          stroke="#ccc"
+          strokeWidth="0.4"
+        />
+
+        {/* Trees top left */}
+        <circle cx="10" cy="10" r="2" fill="#73D4AF" />
+        <circle cx="12" cy="11" r="2" fill="#3ABB8A" />
+        <circle cx="14" cy="10" r="2" fill="#73D4AF" />
+        <circle cx="16" cy="12" r="2" fill="#3ABB8A" />
+        <circle cx="17" cy="9" r="2" fill="#73D4AF" />
+        <circle cx="15" cy="7" r="2" fill="#3ABB8A" />
+        <circle cx="20" cy="8" r="2" fill="#73D4AF" />
+        <circle cx="19" cy="5" r="2" fill="#3ABB8A" />
+        <circle cx="17" cy="6" r="2" fill="#73D4AF" />
+        <circle cx="22" cy="7" r="2" fill="#3ABB8A" />
+        <circle cx="22" cy="4" r="2" fill="#73D4AF" />
+        <circle cx="24" cy="4" r="2" fill="#3ABB8A" />
+
+        {/* Trees mid left */}
+        <circle cx="10" cy="60" r="3" fill="#73D4AF" />
+        <circle cx="13" cy="57" r="3" fill="#3ABB8A" />
+        <circle cx="16" cy="61" r="3" fill="#73D4AF" />
+        <circle cx="19" cy="59" r="3" fill="#3ABB8A" />
+        <circle cx="17" cy="55" r="3" fill="#73D4AF" />
+        <circle cx="21" cy="53" r="3" fill="#3ABB8A" />
+        <circle cx="22" cy="58" r="3" fill="#73D4AF" />
+        <circle cx="25" cy="60" r="3" fill="#3ABB8A" />
+        <circle cx="28" cy="58" r="3" fill="#73D4AF" />
+        <circle cx="25" cy="56" r="3" fill="#3ABB8A" />
+        <circle cx="26" cy="51" r="3" fill="#73D4AF" />
+        <circle cx="30" cy="49" r="3" fill="#3ABB8A" />
+        <circle cx="33" cy="47" r="3" fill="#73D4AF" />
+        <circle cx="30" cy="54" r="3" fill="#3ABB8A" />
+        <circle cx="34" cy="52" r="3" fill="#73D4AF" />
+        <circle cx="37" cy="48" r="3" fill="#3ABB8A" />
+        <circle cx="42" cy="47" r="3" fill="#73D4AF" />
+        <circle cx="46" cy="44" r="3" fill="#3ABB8A" />
+        <circle cx="47" cy="40" r="3" fill="#73D4AF" />
+        <circle cx="45" cy="36" r="3" fill="#3ABB8A" />
+        <circle cx="46" cy="32" r="3" fill="#73D4AF" />
+        <circle cx="43" cy="52" r="3" fill="#3ABB8A" />
+        <circle cx="47" cy="49" r="3" fill="#73D4AF" />
+        <circle cx="49" cy="52" r="3" fill="#3ABB8A" />
+        <circle cx="51" cy="56" r="3" fill="#73D4AF" />
+        <circle cx="53" cy="60" r="3" fill="#3ABB8A" />
+        <circle cx="58" cy="61" r="3" fill="#73D4AF" />
+        <circle cx="55" cy="54" r="3" fill="#3ABB8A" />
+        <circle cx="53" cy="50" r="4" fill="#73D4AF" />
+        <circle cx="51" cy="44" r="4" fill="#3ABB8A" />
+        <circle cx="53" cy="40" r="4" fill="#73D4AF" />
+        <circle cx="50" cy="35" r="4" fill="#3ABB8A" />
+        <circle cx="57" cy="57" r="3" fill="#73D4AF" />
+        <circle cx="60" cy="57" r="3" fill="#3ABB8A" />
+
+        {/* Trees bottom left */}
+        <circle cx="30" cy="85" r="2" fill="#73D4AF" />
+        <circle cx="28" cy="86" r="2" fill="#3ABB8A" />
+        <circle cx="29" cy="88" r="2" fill="#73D4AF" />
+        <circle cx="26" cy="89" r="2" fill="#3ABB8A" />
+        <circle cx="25" cy="86" r="2" fill="#73D4AF" />
+        <circle cx="26" cy="89" r="2" fill="#3ABB8A" />
+        <circle cx="27" cy="92" r="2" fill="#73D4AF" />
+        <circle cx="29" cy="91" r="2" fill="#3ABB8A" />
+        <circle cx="23" cy="89" r="2" fill="#73D4AF" />
+        <circle cx="24" cy="91" r="2" fill="#3ABB8A" />
+        <circle cx="22" cy="92" r="2" fill="#73D4AF" />
+        <circle cx="20" cy="90" r="2" fill="#3ABB8A" />
+        <circle cx="18" cy="92" r="2" fill="#73D4AF" />
       </svg>
     </div>
   );
