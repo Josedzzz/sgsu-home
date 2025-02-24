@@ -7,9 +7,10 @@ export default function Main() {
     <div
       style={{
         width: "100%",
-        maxWidth: "600px",
+        maxWidth: "700px",
         margin: "0 auto",
-        border: "1px solid #ccc",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+        backgroundColor: "#fff",
       }}
     >
       <svg
