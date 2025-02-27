@@ -1,4 +1,10 @@
-export default function Main() {
+// the props of the component
+interface MainProps {
+  handleBuildSelection: (buildingId: string) => void;
+  buildingId: string;
+}
+
+export default function Main({ handleBuildSelection, buildingId }: MainProps) {
   const handleZoneClick = (zoneName: string) => {
     alert(`Hiciste clic en: ${zoneName}`);
   };
@@ -24,55 +30,79 @@ export default function Main() {
         {/* polygon f6 */}
         <polygon
           points="0, 45 7, 45 7, 40 4, 40, 4, 42, 0, 42"
-          fill="#9b59b6"
+          fill={buildingId === "f6" ? "#8e44ad" : "#9b59b6"}
+          className={buildingId === "f6" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#8e44ad")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#9b59b6")}
-          onClick={() => handleZoneClick("f6")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "f6" ? "#8e44ad" : "#9b59b6")
+          }
+          onClick={() => handleBuildSelection("f6")}
         />
 
         {/* polygon f5 */}
         <polygon
           points="9, 46 12, 46 12, 43 9, 43"
-          fill="#9b59b6"
+          fill={buildingId === "f5" ? "#8e44ad" : "#9b59b6"}
+          className={buildingId === "f5" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#8e44ad")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#9b59b6")}
-          onClick={() => handleZoneClick("f5")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "f5" ? "#8e44ad" : "#9b59b6")
+          }
+          onClick={() => handleBuildSelection("f5")}
         />
 
         {/* polygon f4 */}
         <polygon
           points="9, 42 15, 42 15, 38 20, 38 20, 34 14, 34 14, 36 9, 36"
-          fill="#9b59b6"
+          fill={buildingId === "f4" ? "#8e44ad" : "#9b59b6"}
+          className={buildingId === "f4" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#8e44ad")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#9b59b6")}
-          onClick={() => handleZoneClick("f4")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "f4" ? "#8e44ad" : "#9b59b6")
+          }
+          onClick={() => handleBuildSelection("f4")}
         />
 
-        {/* polygon f3 */}
+        {/* polygon f2 */}
         <polygon
           points="21, 31 26, 36 30, 32 25, 27"
-          fill="#9b59b6"
+          fill={buildingId === "f2" ? "#8e44ad" : "#9b59b6"}
+          className={buildingId === "f2" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#8e44ad")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#9b59b6")}
-          onClick={() => handleZoneClick("f3")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "f2" ? "#8e44ad" : "#9b59b6")
+          }
+          onClick={() => handleBuildSelection("f2")}
         />
 
         {/* polygon f2 */}
         <polygon
           points="32, 32 32, 34 34, 34 36, 36 39, 30 36, 28 33, 32"
-          fill="#9b59b6"
+          fill={buildingId === "f2" ? "#8e44ad" : "#9b59b6"}
+          className={buildingId === "f2" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#8e44ad")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#9b59b6")}
-          onClick={() => handleZoneClick("f2")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "f2" ? "#8e44ad" : "#9b59b6")
+          }
+          onClick={() => handleBuildSelection("f2")}
         />
 
         {/* polygon f1 */}
         <polygon
           points="28, 26 30, 28 32, 26 32, 30 36, 26 40, 26 40, 16 32, 16 32, 20"
-          fill="#9b59b6"
+          fill={buildingId === "f1" ? "#8e44ad" : "#9b59b6"}
+          className={buildingId === "f1" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#8e44ad")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#9b59b6")}
-          onClick={() => handleZoneClick("f1")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "f1" ? "#8e44ad" : "#9b59b6")
+          }
+          onClick={() => handleBuildSelection("f1")}
         />
 
         {/* Guamos zone */}
@@ -80,28 +110,40 @@ export default function Main() {
         {/* polygon d2 */}
         <polygon
           points="84, 4 82, 9 90, 10 92, 5"
-          fill="#64b5f6"
+          fill={buildingId === "d2" ? "#64b5f6" : "#1976d2"}
+          className={buildingId === "d2" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#1976d2")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#64b5f6")}
-          onClick={() => handleZoneClick("d2")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "d2" ? "#64b5f6" : "#1976d2")
+          }
+          onClick={() => handleBuildSelection("d2")}
         />
 
         {/* polygon d3 */}
         <polygon
           points="50, 0 53, 2 50, 4 47, 2"
-          fill="#64b5f6"
+          fill={buildingId === "d3" ? "#64b5f6" : "#1976d2"}
+          className={buildingId === "d3" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#1976d2")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#64b5f6")}
-          onClick={() => handleZoneClick("d3")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "d3" ? "#64b5f6" : "#1976d2")
+          }
+          onClick={() => handleBuildSelection("d3")}
         />
 
         {/* polygon d4 */}
         <polygon
           points="46, 14 50, 20 58, 14 54, 8"
-          fill="#64b5f6"
+          fill={buildingId === "d4" ? "#64b5f6" : "#1976d2"}
+          className={buildingId === "d4" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#1976d2")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#64b5f6")}
-          onClick={() => handleZoneClick("d4")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "d4" ? "#64b5f6" : "#1976d2")
+          }
+          onClick={() => handleBuildSelection("d4")}
         />
 
         {/* Platanillas zone */}
@@ -109,37 +151,53 @@ export default function Main() {
         {/* polygon e1 */}
         <polygon
           points="75, 9 76, 12 80, 11 79, 8"
-          fill="#ef5350"
+          fill={buildingId === "e1" ? "#ef5350" : "#d32f2f"}
+          className={buildingId === "e1" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
-          onClick={() => handleZoneClick("e1")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "e1" ? "#ef5350" : "#d32f2f")
+          }
+          onClick={() => handleBuildSelection("e1")}
         />
 
         {/* polygon e2 */}
         <polygon
           points="70, 11 71, 14 75, 13 74, 10"
-          fill="#ef5350"
+          fill={buildingId === "e2" ? "#ef5350" : "#d32f2f"}
+          className={buildingId === "e2" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
-          onClick={() => handleZoneClick("e2")}
-        />
-
-        {/* polygon e3 */}
-        <polygon
-          points="58, 5 62, 11 74, 9 72, 3"
-          fill="#ef5350"
-          onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
-          onClick={() => handleZoneClick("e3")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "e2" ? "#ef5350" : "#d32f2f")
+          }
+          onClick={() => handleBuildSelection("e2")}
         />
 
         {/* polygon e4 */}
         <polygon
-          points="62, 12 63, 15 70, 14 69, 11"
-          fill="#ef5350"
+          points="58, 5 62, 11 74, 9 72, 3"
+          fill={buildingId === "e4" ? "#ef5350" : "#d32f2f"}
+          className={buildingId === "e4" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ef5350")}
-          onClick={() => handleZoneClick("e4")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "e4" ? "#ef5350" : "#d32f2f")
+          }
+          onClick={() => handleBuildSelection("e4")}
+        />
+
+        {/* polygon e5 */}
+        <polygon
+          points="62, 12 63, 15 70, 14 69, 11"
+          fill={buildingId === "e5" ? "#ef5350" : "#d32f2f"}
+          className={buildingId === "e5" ? "animate-pulse" : ""}
+          onMouseEnter={(e) => (e.currentTarget.style.fill = "#d32f2f")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "e5" ? "#ef5350" : "#d32f2f")
+          }
+          onClick={() => handleBuildSelection("e5")}
         />
 
         {/* Cambulos zone */}
@@ -147,10 +205,14 @@ export default function Main() {
         {/* polygon c10 */}
         <polygon
           points="98, 9 94, 18 89, 17 94, 7"
-          fill="#ffa726"
+          fill={buildingId === "c10" ? "#ffa726" : "#f57c00"}
+          className={buildingId === "c10" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
-          onClick={() => handleZoneClick("c10")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "c10" ? "#ffa726" : "#f57c00")
+          }
+          onClick={() => handleBuildSelection("c10")}
         />
 
         {/* circle c9 */}
@@ -158,19 +220,27 @@ export default function Main() {
           cx="80"
           cy="18"
           r="3"
-          fill="#ffa726"
+          fill={buildingId === "c9" ? "#ffa726" : "#f57c00"}
+          className={buildingId === "c9" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
-          onClick={() => handleZoneClick("c9")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "c9" ? "#ffa726" : "#f57c00")
+          }
+          onClick={() => handleBuildSelection("c9")}
         />
 
         {/* polygon c7 */}
         <polygon
           points="55, 28 70, 49 85, 44 70, 23"
-          fill="#ffa726"
+          fill={buildingId === "c7" ? "#ffa726" : "#f57c00"}
+          className={buildingId === "c7" ? "animate-pulse" : ""}
           onMouseEnter={(e) => (e.currentTarget.style.fill = "#f57c00")}
-          onMouseLeave={(e) => (e.currentTarget.style.fill = "#ffa726")}
-          onClick={() => handleZoneClick("c7")}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.fill =
+              buildingId === "c7" ? "#ffa726" : "#f57c00")
+          }
+          onClick={() => handleBuildSelection("c7")}
         />
 
         {/* polygon c6 */}

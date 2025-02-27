@@ -8,6 +8,7 @@ import { SideBar } from "./components/SideBar";
 function App() {
   const [zoneId, setZoneId] = useState<string>("guayacan");
   const [data, setData] = useState<Zone | null>(null);
+  const [buildingId, setBuildingId] = useState<string>("a1");
 
   /**
    * set the zoneId
@@ -15,6 +16,20 @@ function App() {
    */
   const handleZoneSelection = (zoneId: string) => {
     setZoneId(zoneId);
+  };
+
+  /**
+   * set the buildingId, if the building corresponds to a different zone, update the zone
+   * @param buildingId the id of the building
+   */
+  const handleBuildSelection = (buildingId: string) => {
+    setBuildingId(buildingId);
+    const selectedZone = universityData.find((zone) =>
+      zone.buildings.some((building) => building.id === buildingId),
+    );
+    if (selectedZone && selectedZone.id !== zoneId) {
+      setZoneId(selectedZone.id);
+    }
   };
 
   /**
@@ -31,10 +46,17 @@ function App() {
       <Header handleZoneSelection={handleZoneSelection} zoneId={zoneId} />
       <div className="flex flex-col items-center justify-center md:flex-row mt-20 gap-4 min-h-[calc(100vh-6rem)] p-2">
         <div className="flex-1">
-          <Main />
+          <Main
+            handleBuildSelection={handleBuildSelection}
+            buildingId={buildingId}
+          />
         </div>
         <div className="flex-1">
-          <SideBar data={data} />
+          <SideBar
+            data={data}
+            handleBuildSelection={handleBuildSelection}
+            buildingId={buildingId}
+          />
         </div>
       </div>
     </>
