@@ -17,6 +17,5 @@ export interface Building {
     | "Bloque Administrativo"
     | "Laboratorio";
   description: string;
-  coordinates: { x: number; y: number; z: number }; // Location on the map
   pointsOfInterest: MapPoint[]; // Specific places inside the building
 }
