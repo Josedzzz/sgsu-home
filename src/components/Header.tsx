@@ -13,21 +13,21 @@ export default function Header({ handleZoneSelection, zoneId }: HeaderProps) {
     universityData.find((zone) => zone.id === zoneId)?.name || "";
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] bg-emerald-500 shadow-lg rounded-2xl p-2 z-50 animate-[slide-in-right_0.5s_ease-in]">
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
-        <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-white">
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[94%] bg-emerald-500 shadow-lg rounded-2xl p-2 z-50 animate-[slide-in-right_0.5s_ease-in]">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-2">
+        <h2 className="text-lg sm:text-1xl md:text-2xl font-bold text-white">
           Universidad del Quindío
         </h2>
 
         <div
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          className="relative flex items-center gap-3 cursor-pointer hover:scale-110 transition-transform"
+          className="relative flex items-center gap-1 cursor-pointer hover:scale-110 transition-transform"
         >
           <span className="text-white font-semibold text-sm sm:text-md md:text-lg">
             {selectedZone}
           </span>
           <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-            <i className="fa-solid fa-bars text-white text-2xl cursor-pointer hover:scale-110 transition-transform"></i>
+            <i className="fa-solid fa-bars text-white text-lg sm:text-xl cursor-pointer hover:scale-110 transition-transform"></i>
           </button>
         </div>
       </div>
