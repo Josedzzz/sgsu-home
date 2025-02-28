@@ -15,6 +15,7 @@ export default function Main({ handleBuildSelection, buildingId }: MainProps) {
         backgroundColor: "#fff",
         borderRadius: "18px",
       }}
+      className="animate-[slide-in-bottom_0.6s_ease-in]"
     >
       <svg
         viewBox="0 0 100 100"
