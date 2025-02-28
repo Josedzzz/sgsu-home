@@ -14,7 +14,7 @@ export function SideBar({
   buildingId,
 }: SideBarProps) {
   return (
-    <div className="flex flex-col gap-4 p-6 bg-white text-black shadow-lg rounded-lg h-auto max-h-[calc(100vh-6rem)] overflow-y-auto animate-[fade-in_0.8s_ease-in]">
+    <div className="flex flex-col gap-4 p-6 bg-white text-black shadow-lg rounded-lg h-auto md:max-h-[calc(100vh-6rem)] md:overflow-y-auto animate-[fade-in_0.8s_ease-in]">
       {data ? (
         <>
           <h2 className="text-2xl font-bold border-b pb-2 border-gray-300">
