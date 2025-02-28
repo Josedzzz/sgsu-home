@@ -142,6 +142,24 @@ export const universityData: Zone[] = [
         pointsOfInterest: [],
       },
       {
+        id: "c5",
+        name: "Piscina",
+        type: "Cancha",
+        description:
+          "Espacio adecuado para que los deportistas practiquen todo tipo de deportes acuaticos",
+        coordinates: { x: 21, y: 30, z: 0 },
+        pointsOfInterest: [],
+      },
+      {
+        id: "c6",
+        name: "Camerinos",
+        type: "Edificio",
+        description:
+          "Espacio adecuado para que los deportistas hagan uso de los camerinos.",
+        coordinates: { x: 21, y: 30, z: 0 },
+        pointsOfInterest: [],
+      },
+      {
         id: "c7",
         name: "Cancha de fútbol",
         type: "Cancha",
