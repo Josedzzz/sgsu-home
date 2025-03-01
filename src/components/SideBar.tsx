@@ -35,6 +35,40 @@ export function SideBar({
                 <h3 className="text-lg font-semibold">{building.name}</h3>
                 <p className="text-sm text-gray-600">{building.type}</p>
                 <p className="text-sm mt-1">{building.description}</p>
+
+                {/* Display Points of Interest */}
+                {building.pointsOfInterest &&
+                  building.pointsOfInterest.length > 0 && (
+                    <div className="mt-2">
+                      <h4 className="text-sm font-semibold text-gray-700">
+                        Puntos de interés:
+                      </h4>
+                      <ul className="list-disc list-inside">
+                        {building.pointsOfInterest.map((point, index) => (
+                          <li key={index} className="text-sm text-gray-600">
+                            {point.link ? (
+                              <a
+                                href={
+                                  point.link.startsWith("http://") ||
+                                  point.link.startsWith("https://")
+                                    ? point.link
+                                    : `https://${point.link}`
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-emerald-500 hover:underline"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                {point.name}
+                              </a>
+                            ) : (
+                              <span>{point.name}</span>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
               </div>
             ))}
           </div>
