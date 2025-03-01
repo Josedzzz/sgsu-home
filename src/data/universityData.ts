@@ -281,7 +281,7 @@ export const universityData: Zone[] = [
         pointsOfInterest: [
           {
             name: "Laboratorio de Electrónica",
-            link: "labuq.catavento.co",
+            link: "https://labuq.catavento.co/",
           },
         ],
       },
