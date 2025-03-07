@@ -32,7 +32,9 @@ export function SideBar({
                 }`}
                 onClick={() => handleBuildSelection(building.id)}
               >
-                <h3 className="text-lg font-semibold">{building.name}</h3>
+                <h3 className="text-lg font-semibold">
+                  {building.id}. {building.name}
+                </h3>
                 <p className="text-sm text-gray-600">{building.type}</p>
                 <p className="text-sm mt-1">{building.description}</p>
 
