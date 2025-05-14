@@ -108,7 +108,12 @@ export const universityData: Zone[] = [
         type: "Coliseo",
         description:
           "Es el principal escenario deportivo del campus, diseñado para la práctica y desarrollo de diversas disciplinas atléticas.",
-        pointsOfInterest: [],
+        pointsOfInterest: [
+          {
+            name: "Reserva espacios",
+            link: "https://espacios-sgsu.vercel.app/#/login",
+          },
+        ],
       },
       {
         id: "c2",
