@@ -25,9 +25,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # Optional: Add test step
-      # - name: Run tests
-      #   run: npm test
+      - name: Run tests
+        run: npx jest
 
       # Optional: deploy to GitHub Pages, Netlify, or other
       # (let me know if you want to include deployment!)
